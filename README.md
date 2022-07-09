@@ -1,9 +1,9 @@
 # Documentation: Running `aws-vault` in `devContainer`
 - [Documentation: Running `aws-vault` in `devContainer`](#documentation-running-aws-vault-in-devcontainer)
   - [Steps](#steps)
-    - [set up `~/.aws/config`](#set-up-awsconfig)
-    - [install `aws-vault` in dockerfile](#install-aws-vault-in-dockerfile)
-    - [set environment variables in `.decontainer/devcontainer.env`](#set-environment-variables-in-decontainerdevcontainerenv)
+    - [Set up `~/.aws/config`](#set-up-awsconfig)
+    - [Install `aws-vault` in dockerfile](#install-aws-vault-in-dockerfile)
+    - [Set environment variables in `.decontainer/devcontainer.env`](#set-environment-variables-in-decontainerdevcontainerenv)
     - [`.devcontainer/devcontainer.json`](#devcontainerdevcontainerjson)
     - [Verify](#verify)
   - [TODO](#todo)
@@ -16,8 +16,8 @@
 For `devContainer`, I use encrypted file as backend.
 
 ## Steps
-### set up `~/.aws/config`
-Set up aws config file for assume role as follow:
+### Set up `~/.aws/config`
+Set up aws config file to assume role as follow:
 ```apacheconf
 [profile devcontainer_aws]
 mfa_serial = arn:aws:iam::1234567890:mfa/john.zen
@@ -30,7 +30,7 @@ role_arn = arn:aws:iam::1234567890:role/team-role-a
 mfa_serial = arn:aws:iam::1234567890:mfa/my_aws_user_name
 role_session_name = my_aws_user_nameInstall aws-vault in .devcontainer/Dockerfile
 ```
-### install `aws-vault` in dockerfile
+### Install `aws-vault` in dockerfile
 In .devcontainer/Dockerfile , add the following:
 ```dockerfile
 #...
@@ -40,7 +40,7 @@ RUN chmod +x /usr/bin/aws-vault
 #...
 ```
 
-### set environment variables in `.decontainer/devcontainer.env`
+### Set environment variables in `.decontainer/devcontainer.env`
 Add to .gitignore as this file contain sensitive information
 ```bash
 # .gitignore
