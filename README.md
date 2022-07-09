@@ -92,3 +92,6 @@ aws-vault exec team-role-a -- terraform apply
 
 ## TODO
 - Find out way to read KeyChain to pass to devContainer instead of storing ACCESS KEY and ACCESS SECRET in `devContainer.env` file.
+- To explore:
+  - https://gist.github.com/danwashusen/d3b942e4fa013c27bd5fd421403617d8
+  - https://github.com/99designs/aws-vault/blob/master/USAGE.md#:~:text=Session%20duration-,Using%20%2D%2Dserver,-%2D%2Decs%2Dserver
