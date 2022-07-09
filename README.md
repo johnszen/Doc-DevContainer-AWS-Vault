@@ -18,7 +18,7 @@ For `devContainer`, I use encrypted file as backend.
 ## Steps
 ### set up `~/.aws/config`
 Set up aws config file for assume role as follow:
-```toml
+```apacheconf
 [profile devcontainer_aws]
 mfa_serial = arn:aws:iam::1234567890:mfa/john.zen
 
