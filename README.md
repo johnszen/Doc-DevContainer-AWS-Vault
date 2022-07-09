@@ -88,7 +88,11 @@ aws-vault exec team-role-a -- terraform init
 aws-vault exec team-role-a -- terraform plan
 aws-vault exec team-role-a -- terraform apply
 ```
-
+## Reference
+- https://blog.formswift.com/indefinitely-long-lived-aws-sessions-using-aws-vault-and-docker-compose-the-guide-i-wish-id-had-b1e3166daf46
+- https://medium.com/geekculture/working-with-terraform-and-aws-within-a-container-on-visual-studio-code-8f6f1a0f2a2a
+- https://aws.amazon.com/premiumsupport/knowledge-center/iam-assume-role-cli/
+- https://www.tomica.net/blog/2019/10/configuring-aws-vault-with-password-store/
 
 ## TODO
 - Find out way to read KeyChain to pass to devContainer instead of storing ACCESS KEY and ACCESS SECRET in `devContainer.env` file.
