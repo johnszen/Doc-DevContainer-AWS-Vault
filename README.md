@@ -1,11 +1,13 @@
 # Documentation: Running `aws-vault` in `devContainer`
 - [Documentation: Running `aws-vault` in `devContainer`](#documentation-running-aws-vault-in-devcontainer)
+  - [Purpose](#purpose)
   - [Steps](#steps)
     - [Set up `~/.aws/config`](#set-up-awsconfig)
     - [Install `aws-vault` in dockerfile](#install-aws-vault-in-dockerfile)
     - [Set environment variables in `.decontainer/devcontainer.env`](#set-environment-variables-in-decontainerdevcontainerenv)
     - [`.devcontainer/devcontainer.json`](#devcontainerdevcontainerjson)
     - [Verify](#verify)
+  - [Reference](#reference)
   - [TODO](#todo)
 
 ## Purpose

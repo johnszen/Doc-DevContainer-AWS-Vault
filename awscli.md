@@ -1,5 +1,9 @@
 # Using `aws sts get-session-token` to create aws session
-
+- [Using `aws sts get-session-token` to create aws session](#using-aws-sts-get-session-token-to-create-aws-session)
+  - [TL;DR](#tldr)
+  - [Steps](#steps)
+    - [Get an aws session](#get-an-aws-session)
+    - [Use assume-role in Terraform](#use-assume-role-in-terraform)
 ## TL;DR
 - Create an aws session `aws sts get-session-token`
   - save the session in `~/.aws/credentials`
