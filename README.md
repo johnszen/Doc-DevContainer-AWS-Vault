@@ -8,12 +8,18 @@
     - [Verify](#verify)
   - [TODO](#todo)
 
+## Purpose
+The purpose is to:
+- login to `aws cli` with 2FA
+- assume an aws iam role
 
-`aws-vault` allows accessing aws with different iam-role.
+Two ways are explored:
+- use aws-cli `aws sts` described [here](awscli.md)
+- use `aws-vault exec "aws-iam-role"`. On MacOS desktop, backend is KeyChain. Described below is to use `aws-vault` in devContainer.
 
-`aws-vault` on desktop uses MacOS's KeyChain as backend to store aws ACCESS KEY and SECRET.
-
-For `devContainer`, I use encrypted file as backend.
+`aws-vault`
+- allows accessing aws with different iam-role.
+- on desktop uses MacOS's KeyChain as backend to store aws ACCESS KEY and SECRET; in `devContainer`, encrypted file is used as backend.
 
 ## Steps
 ### Set up `~/.aws/config`
