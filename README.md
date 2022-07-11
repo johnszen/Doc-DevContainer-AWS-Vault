@@ -14,10 +14,11 @@
 The purpose is to:
 - login to `aws cli` with 2FA
 - assume an aws iam role
+- use in devContainer
 
 Two ways are explored:
 - use aws-cli `aws sts` described [here](awscli.md)
-- use `aws-vault exec "aws-iam-role"`. On MacOS desktop, backend is KeyChain. Described below is to use `aws-vault` in devContainer.
+- set up and use `aws-vault` in devContainer; to use `aws-vault exec "aws-iam-role"`.
 
 `aws-vault`
 - allows accessing aws with different iam-role.
@@ -26,7 +27,7 @@ Two ways are explored:
 ## Steps
 ### Set up `~/.aws/config`
 Set up aws config file to assume role as follow:
-```apacheconf
+```ini
 [profile devcontainer_aws]
 mfa_serial = arn:aws:iam::1234567890:mfa/john.zen
 
@@ -39,7 +40,7 @@ mfa_serial = arn:aws:iam::1234567890:mfa/my_aws_user_name
 role_session_name = my_aws_user_nameInstall aws-vault in .devcontainer/Dockerfile
 ```
 ### Install `aws-vault` in dockerfile
-In .devcontainer/Dockerfile , add the following:
+In `.devcontainer/Dockerfile` , add the following:
 ```dockerfile
 #...
 # select the archtype depending on your MacOS; mine is Intel, select the closest amd64
